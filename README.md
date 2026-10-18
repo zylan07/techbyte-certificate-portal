@@ -169,7 +169,7 @@ When deploying to Render or similar cloud platforms:
    ```
 2. **Start Command**:
    ```bash
-   uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+   PYTHONPATH=backend uvicorn app.main:app --host 0.0.0.0 --port $PORT
    ```
 3. **Environment Variables on Render**:
    Configure `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_FROM_EMAIL`, `SMTP_FROM_NAME`, and `EMAIL_DRY_RUN` in the Render dashboard environment settings.
